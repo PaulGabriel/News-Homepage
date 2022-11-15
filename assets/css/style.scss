@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-
-$font: 'Inter', sans-serif;
-$font-size: 1rem;
-
-$soft-orange: hsl(35, 77%, 62%);
-$soft-red: hsl(5, 85%, 63%);
-$white: hsl(36, 100%, 99%);
-$blue-100: hsl(233, 8%, 79%);
-$blue-200: hsl(236, 13%, 42%);
-$blue-300: hsl(240, 100%, 5%);
-
-/*-------------------*/
+@import '_tokens';
 
 body{
     max-width: 1440px;
@@ -21,10 +9,34 @@ body{
     font-size: $font-size;
 }
 
+h1{
+    color: $blue-300;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2{
+    font-weight: 600;
+    color: $soft-orange;
+    font-size: 2rem;
+}
+
+.display-{
+    &desktop{
+        display: block;
+    }
+
+    &mobile{
+        display: none;
+    }
+}
+
 header{
     display: flex;
     justify-content: space-between;
-    margin: 6rem 0;
+    align-items: center;
+    margin: 6rem 2rem 3rem 2rem;
 
     nav{
         ul{
@@ -44,4 +56,134 @@ header{
     }
 }
 
-@import url('mobile.scss');
+.main-section{
+    display: flex;
+    gap: 24px;
+    margin: 0 32px;
+    --animate-delay: 0.5s;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .banner img{
+            width: 100%;
+       
+        }
+
+        .article{
+            display: flex;
+            flex-direction: row;
+
+            &--content{
+                display: flex;
+                flex-direction: column;
+                padding: 0 88px;
+
+                p{
+                    line-height: 1.5rem;
+                    color: $blue-200;
+                    margin-bottom: 3rem;
+                }
+
+                button{
+                    width: 156px;
+                    color: white;
+                    height: 40px;
+                    border: 0;
+                    background-color: $soft-red;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 0.1rem;
+
+                    &:hover{
+                        background-color: $blue-300;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+    .news{
+        padding: 1rem 2.5rem;
+        background: $blue-300;
+
+        a{
+            text-decoration: none;
+        }
+
+        h3{
+            color: white;
+            font-size: 1rem;
+            margin-top: 2rem;
+
+            &:hover{
+                color: $soft-orange;
+            }
+        }
+
+        p{
+            color: $blue-100;
+            font-size: 0.8rem;
+            line-height: 21px;
+            margin-bottom: 2rem;
+        }
+
+        hr{
+            border-color: $blue-200;
+        }
+    }
+}
+
+.blog-section{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 6rem 2.5rem;
+
+    article{
+        display: flex;
+
+        img {
+            width: 120px;
+            &:hover{
+                transform: scale(1.1); 
+                transition: all .2s ease-in-out; 
+            }
+        }
+
+        .post-content{
+            display: flex;
+            flex-direction: column;
+            padding: 0 2rem;
+
+            a{
+                text-decoration: none;
+            }
+
+            .post-counter{
+                font-weight: 800;
+                font-size: 2rem;
+                color: $blue-100;
+            }
+
+            h4{
+                margin: 1rem 0 0 0;
+                color: $blue-300;
+
+                &:hover{
+                    color: $soft-red;
+                }
+            }
+
+            p{
+                color: $blue-200;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+@import 'mobile.scss';

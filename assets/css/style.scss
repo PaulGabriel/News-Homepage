@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+$font: 'Inter', sans-serif;
+$font-size: 1rem;
+
+$soft-orange: hsl(35, 77%, 62%);
+$soft-red: hsl(5, 85%, 63%);
+$white: hsl(36, 100%, 99%);
+$blue-100: hsl(233, 8%, 79%);
+$blue-200: hsl(236, 13%, 42%);
+$blue-300: hsl(240, 100%, 5%);
+
+/*-------------------*/
+
+body{
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: $font;
+    font-size: $font-size;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 0;
+
+    nav{
+        ul{
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+
+            a{
+                text-decoration: none;
+                color: $blue-200;
+
+                &:hover{
+                    color: $soft-red;
+                }
+            }
+        }
+    }
+}
+
+@import url('mobile.scss');

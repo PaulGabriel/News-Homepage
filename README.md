@@ -1,3 +1,5 @@
+See it live: https://paulgabriel.github.io/News-Homepage/
+
 # Frontend Mentor - News homepage
 
 ![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)

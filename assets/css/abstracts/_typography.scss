@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+$font: 'Inter', sans-serif;
+$font-size: 1rem;
+
+h1{
+    color: $blue-300;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2{
+    font-weight: 600;
+    color: $soft-orange;
+    font-size: 2rem;
+}
+
+h3{
+    color: white;
+    font-size: 1rem;
+    margin-top: 2rem;
+
+    &:hover{
+        color: $soft-orange;
+    }
+}
+
+h4{
+    margin: 1rem 0 0 0;
+    color: $blue-300;
+
+    &:hover{
+        color: $soft-red;
+    }
+}

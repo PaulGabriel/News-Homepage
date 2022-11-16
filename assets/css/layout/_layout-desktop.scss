@@ -1,37 +1,5 @@
-@import '_tokens';
-
-
-h1{
-    color: $blue-300;
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-}
-
-h2{
-    font-weight: 600;
-    color: $soft-orange;
-    font-size: 2rem;
-}
-
-h3{
-    color: white;
-    font-size: 1rem;
-    margin-top: 2rem;
-
-    &:hover{
-        color: $soft-orange;
-    }
-}
-
-h4{
-    margin: 1rem 0 0 0;
-    color: $blue-300;
-
-    &:hover{
-        color: $soft-red;
-    }
-}
+@import '../abstracts/variables';
+@import '../abstracts/typography';
 
 a{
     text-decoration: none;
@@ -88,14 +56,14 @@ header{
 
 .main-section{
     display: flex;
-    gap: 24px;
-    margin: 0 32px;
+    gap: 2rem;
+    margin: 0 3rem;
     --animate-delay: 0.5s;
 
     .content{
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 1rem;
 
         .banner img{
             width: 100%;
@@ -104,12 +72,11 @@ header{
 
         .article{
             display: flex;
-            flex-direction: row;
-
+            
             &--content{
                 display: flex;
                 flex-direction: column;
-                padding: 0 88px;
+                padding: 0 5.5rem;
 
                 p{
                     line-height: 1.5rem;
@@ -118,9 +85,9 @@ header{
                 }
 
                 button{
-                    width: 156px;
-                    color: white;
-                    height: 40px;
+                    width: 9rem;
+                    color: $white;
+                    height: 2.5rem;
                     border: 0;
                     background-color: $soft-red;
                     text-transform: uppercase;
@@ -151,7 +118,7 @@ header{
         p{
             color: $blue-100;
             font-size: 0.8rem;
-            line-height: 21px;
+            line-height: 1.2rem;
             margin-bottom: 2rem;
         }
 
@@ -203,4 +170,4 @@ header{
     }
 }
 
-@import '_mobile.scss';
+@import 'layout-mobile';

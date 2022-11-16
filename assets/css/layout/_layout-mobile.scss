@@ -1,5 +1,5 @@
-@import '_tokens';
-
+@import '../abstracts/variables';
+@import '../abstracts/typography';
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px){
@@ -49,8 +49,8 @@
 
         .icon-close{
             position: absolute;
-            right: 16px;
-            top: 16px;
+            right: 1rem;
+            top: 1rem;
         }
 
         nav{
@@ -92,32 +92,13 @@
                 p{
                     margin-bottom: 2rem;
                 }
-            
-                button{
-                    width: 156px;
-                    color: white;
-                    height: 40px;
-                    border: 0;
-                    background-color: $soft-red;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    letter-spacing: 0.1rem;
-                    margin-bottom: 2rem;
-
-                    &:hover{
-                        background-color: $blue-300;
-                        cursor: pointer;
-                    }
-                }
             }
         }
     }
 }
 
     .blog-section{
-        display: flex;
         flex-direction: column;
-        gap: 2rem;
         margin: 3rem 1rem;
     }
 }

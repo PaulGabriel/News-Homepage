@@ -37,7 +37,7 @@ a{
     text-decoration: none;
 }
 
-.display-{
+.only-{
     &desktop{
         display: block;
     }
@@ -76,6 +76,12 @@ header{
                     color: $soft-red;
                 }
             }
+        }
+    }
+
+    .icon-hamburger{
+        &:hover{
+            cursor: pointer;
         }
     }
 }
@@ -197,4 +203,4 @@ header{
     }
 }
 
-@import 'mobile.scss';
+@import '_mobile.scss';

@@ -6,20 +6,16 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-<script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-  <title>Frontend Mentor | News homepage</title>
-
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | News homepage</title>  
 </head>
-<div class="overlay"></div>
-<body class="body">
+
+<body>
+
   <div id="mobile-sidemenu">
-    <span class="icon-close display-mobile"><img src="assets/images/icon-menu-close.svg" alt=""></span>
-    <nav class="nav display-mobile">
+    <span class="icon-close only-mobile"><img src="assets/images/icon-menu-close.svg" alt=""></span>
+    <nav class="nav only-mobile">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">New</a></li>
@@ -33,7 +29,7 @@
 <header class="animate__animated animate__fadeInDown">
   <div class="logo"><img src="assets/images/logo.svg" alt=""></div>
 
-  <nav class="nav display-desktop">
+  <nav class="nav only-desktop">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">New</a></li>
@@ -43,7 +39,7 @@
     </ul>
   </nav>
   <span 
-    class="hamburger display-mobile">
+    class="icon-hamburger only-mobile">
     <img src="assets/images/icon-menu.svg" alt="">
   </span>
 </header>
@@ -109,35 +105,21 @@
    
   </section>
 </main>
-  <!-- 
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-   -->
-
 </body>
 
 <script>
   $(document).ready(function(){
-    $(".hamburger").click(function(){
+    $(".icon-hamburger").click(function(){
       $("#mobile-sidemenu").toggle();
       $(".overlay").show();
-      $("body").css("overflow", "hidden");
+      $( "body" ).prepend( "<div class='overlay'></div>" );
+      $("body").css("position", "fixed");
     });
 
     $(".icon-close").click(function(){
       $("#mobile-sidemenu").toggle();
-      $(".overlay").hide();
-      $("body").css("overflow", "none");
+      $(".overlay").remove();
+      $("body").css("position", "");
     });
   });
   </script>

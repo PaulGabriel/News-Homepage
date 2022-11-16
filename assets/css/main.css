@@ -32,6 +32,10 @@ h4:hover {
   color: hsl(5deg, 85%, 63%);
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   color: hsl(240deg, 100%, 5%);
   font-size: 3rem;
@@ -60,6 +64,10 @@ h4 {
 }
 h4:hover {
   color: hsl(5deg, 85%, 63%);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -335,6 +343,10 @@ h4 {
 }
 h4:hover {
   color: hsl(5deg, 85%, 63%);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
